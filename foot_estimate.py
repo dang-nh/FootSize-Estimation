@@ -31,7 +31,7 @@ def plotImage(img, title):
     
     plt.imshow(img)
     #plt.title('Clustered Image')
-    plt.savefig('results/image_classified/normal_img/'+title)
+    # plt.savefig('results/image_classified/normal_img/'+title)
     # plt.show()
     
 def gammaCorrection(src, gamma):

@@ -41,12 +41,6 @@ uploaded_file = st.file_uploader("Choose an image...")
 if uploaded_file is not None:
     # img_class = classifier(uploaded_file)
     
-    dict_label = {0: 'normal_img',
-              1: 'white_background_img',
-              2: 'skin_background_img',
-              3: 'pattern_background_img',
-              4: 'curve_background_img'}
-    
     height_size = [24.4, 24.8, 25.2, 25.7, 26, 26.5, 26.8, 27.3, 27.8, 28.3, 28.6, 29.4]
     Size_VN_h = ['40', '40-41', '41', '41-42', '42', '42-43', '43', '43-44', '44-45', '45', '46']
     Size_UK_h = ['6', '6.5', '7', '7.5', '8', '8.5', '9', '9.5', '10', '10.5', '11', '12']
