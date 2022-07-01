@@ -25,7 +25,7 @@ def classifier(upload):
             X.append(img)
             y.append(dict_label[folder])
             
-    n_samples = len(os.listdir('images/'))
+    n_samples = len(y)
     clf = svm.SVC(gamma=0.001, C=100)
     clf.fit(X, y)
     

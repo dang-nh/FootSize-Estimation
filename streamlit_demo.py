@@ -25,7 +25,7 @@ def classifier():
             X.append(img)
             y.append(dict_label[folder])
             
-    n_samples = len(os.listdir('images/'))
+    n_samples = len(y)
     clf = svm.SVC(gamma=0.001, C=100)
     clf.fit(X, y)
     
@@ -127,7 +127,7 @@ if uploaded_file is not None:
     index_h = -1
     for i in range(len(height_size)-1):
         if height_size[i] <= ofs_h <= height_size[i+1]:
-            index_w = i
+            index_h = i
     
     txt = f"[INFO] Foot's length (cm): {round(ofs_h, 3)} - Foot's width (cm): {round(ofs_w, 3)}"
     
@@ -137,5 +137,5 @@ if uploaded_file is not None:
     st.title('[FOOT WIDTH SIZE] Size VN: {}\n + Size UK: {}\n + Size US: {}'.format(Size_VN_w[index_w], Size_UK_w[index_w],
                                                                                 Size_US_w[index_w]))
 
-    st.title('[FOOT HEIGHT SIZE] Size VN: {}\n + Size UK: {}\n + Size US: {}'.format(Size_VN_h[index_h], Size_UK_h[index_h],
+    st.title('[FOOT LENGTH SIZE] Size VN: {}\n + Size UK: {}\n + Size US: {}'.format(Size_VN_h[index_h], Size_UK_h[index_h],
                                                                                 Size_US_h[index_h]))
